@@ -2,9 +2,9 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-`ccode` is a stripped-down open-source edition extracted from `Quick_Accesst_Claude`.
+`ccode` is a lightweight launcher for Claude Code with OpenRouter free models.
 
-This version only does one job:
+It is designed to make Claude Code usable with as little setup friction as possible:
 
 - fetch the current OpenRouter free model list
 - let you choose a free model
@@ -14,17 +14,18 @@ This version only does one job:
 - auto-install Claude Code if it is missing
 - launch `claude`
 
-Removed from the original private project:
+Key advantages:
 
-- CouchDB config center
-- personal cloud sync / remote config
-- multi-provider switching
-- release publishing / self-update logic
-- any personal environment or private deployment assumptions
+- no vendor lock-in beyond OpenRouter + Claude Code
+- no cloud config center or personal infrastructure dependency
+- single-file Go implementation with no third-party runtime dependency
+- interactive first-run flow for key input, model selection, and local encrypted key storage
+- automatic Claude Code installation when `claude` is not available
+- cross-platform build output for Linux, macOS, and Windows
 
 ## Scope
 
-This project is intentionally small. It is a single-file Go implementation (`main.go`) with no third-party runtime dependency.
+This project is intentionally small. The runtime logic lives in a single Go file (`main.go`).
 
 ## Requirements
 

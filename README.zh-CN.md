@@ -2,9 +2,9 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-`ccode` 是从 `Quick_Accesst_Claude` 中拆出来的精简开源版。
+`ccode` 是一个面向 Claude Code 的轻量启动器，专门用于接入 OpenRouter 免费模型。
 
-这个版本只做一件事：
+它的目标是尽可能降低使用门槛，让 Claude Code 开箱可用：
 
 - 动态获取 OpenRouter 当前可用的免费模型
 - 交互选择免费模型
@@ -14,17 +14,17 @@
 - 如果本机未安装 Claude Code，自动调用官方安装脚本安装
 - 最后自动启动 `claude`
 
-从原来的私有项目中移除的内容：
+这个项目的优势：
 
-- CouchDB 配置中心
-- 个人云端同步 / 远程配置
-- 多厂商切换
-- 发布 / 自更新逻辑
-- 任何个人化或私有部署耦合
+- 不依赖私有云端配置中心或个人基础设施
+- 核心实现只有一个 Go 文件，结构简单，方便开源维护
+- 首次运行即交互引导：输入 Key、选择模型、可选本地加密保存
+- 本机没有 `claude` 时可自动安装后继续启动
+- 可直接构建 Linux、macOS、Windows 多平台产物
 
 ## 项目范围
 
-这个项目刻意保持很小，只保留一个 Go 源文件：[main.go](/home/moltbot/code/ccode/main.go)，没有第三方运行时依赖。
+这个项目刻意保持很小，运行时核心逻辑集中在一个 Go 文件：[main.go](/home/moltbot/code/ccode/main.go)。
 
 ## 运行要求
 
