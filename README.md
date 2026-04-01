@@ -1,5 +1,7 @@
 # ccode
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 `ccode` is a stripped-down open-source edition extracted from `Quick_Accesst_Claude`.
 
 This version only does one job:
@@ -27,8 +29,9 @@ This project is intentionally small. It is a single-file Go implementation (`mai
 ## Requirements
 
 - Go 1.22+
-- Claude Code already installed and available as `claude`
 - an OpenRouter API key
+- `bash` plus `curl` or `wget` on Linux/macOS for automatic Claude installation
+- PowerShell on Windows for automatic Claude installation
 
 ## Build
 
