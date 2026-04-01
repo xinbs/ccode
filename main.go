@@ -419,6 +419,9 @@ func resolveAPIKey(cfg config) (string, error) {
 		return "", errors.New("missing OpenRouter API key; set OPENROUTER_API_KEY, config.openrouter_api_key_env, or run `ccode` interactively once to save it")
 	}
 
+	fmt.Fprintln(os.Stderr, "OpenRouter API key is required.")
+	fmt.Fprintln(os.Stderr, "Create an account at https://openrouter.ai/ and generate a free API key, then paste it below.")
+
 	value, err := promptDefault("OpenRouter API key", "")
 	if err != nil {
 		return "", err

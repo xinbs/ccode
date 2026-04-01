@@ -71,6 +71,7 @@ export OPENROUTER_API_KEY="your-key"
 
 On first run, if no key is configured, it will:
 
+- tell you to sign up at `https://openrouter.ai/` and create a free API key
 - prompt for your OpenRouter API key
 - ask whether to save it locally
 - store it in encrypted form under `~/.config/ccode-openrouter/openrouter_key.enc.json`

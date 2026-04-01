@@ -67,6 +67,7 @@ bash ./build.sh
 
 首次运行时，如果还没有配置 Key，它会：
 
+- 提示先到 `https://openrouter.ai/` 注册账号并创建一个免费的 API Key
 - 提示输入 OpenRouter API Key
 - 询问是否保存到本地
 - 将 Key 以加密形式保存到 `~/.config/ccode-openrouter/openrouter_key.enc.json`
