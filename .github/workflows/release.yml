@@ -2,8 +2,17 @@ name: release
 
 on:
   push:
+    branches:
+      - main
     tags:
       - "v*"
+    paths:
+      - "main.go"
+      - "go.mod"
+      - "build.sh"
+      - "VERSION"
+      - "config.example.json"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +32,14 @@ jobs:
 
       - name: Build release artifacts
         run: bash ./build.sh
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ccode-build-${{ github.sha }}
+          path: |
+            dist/ccode-*
+            dist/SHA256SUMS.txt
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
