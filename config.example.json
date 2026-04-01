@@ -1,0 +1,8 @@
+{
+  "openrouter_api_key_env": "OPENROUTER_API_KEY",
+  "base_url": "https://openrouter.ai/api",
+  "launch_cmd": "claude",
+  "default_model": "",
+  "http_referer": "https://localhost",
+  "title": "ccode-openrouter"
+}
