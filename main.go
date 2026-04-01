@@ -1447,6 +1447,9 @@ func claudeSearchPaths() []string {
 		appData := strings.TrimSpace(os.Getenv("APPDATA"))
 		localAppData := strings.TrimSpace(os.Getenv("LOCALAPPDATA"))
 		candidates = append(candidates,
+			filepath.Join(home, ".local", "bin", "claude.exe"),
+			filepath.Join(home, ".local", "bin", "claude.cmd"),
+			filepath.Join(home, ".local", "bin", "claude"),
 			filepath.Join(appData, "npm", "claude.cmd"),
 			filepath.Join(appData, "npm", "claude"),
 			filepath.Join(localAppData, "Programs", "Claude", "claude.exe"),
